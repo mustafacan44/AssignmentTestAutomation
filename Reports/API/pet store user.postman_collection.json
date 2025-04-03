@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "55c3a20f-d629-4cf6-b150-6734f4145d07",
+		"name": "pet store user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22395968"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1502,\n  \"username\": \"Mustafa\",\n  \"firstName\": \"Mustafa\",\n  \"lastName\": \"Sahin\",\n  \"email\": \"mustafacansahin.4406@gmail.com\",\n  \"password\": \"Test123\",\n  \"phone\": \"01234567890\",\n  \"userStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/can",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"can"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1502,\n  \"username\": \"Mustafa1\",\n  \"firstName\": \"Mustafa1\",\n  \"lastName\": \"Sahin\",\n  \"email\": \"mustafacansahin.4406@gmail.com\",\n  \"password\": \"demo1234\",\n  \"phone\": \"01234567890\",\n  \"userStatus\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Mustafa",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Mustafa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Mustafa1",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Mustafa1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?username=Mustafa1&password=123",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Mustafa1"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create with array",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 156,\n    \"username\": \"can\",\n    \"firstName\": \"can\",\n    \"lastName\": \"ders\",\n    \"email\": \"canders@gmail.com\",\n    \"password\": \"12345\",\n    \"phone\": \"035563652568\",\n    \"userStatus\": 0\n  },\n {\n    \"id\": 148,\n    \"username\": \"mehmet\",\n    \"firstName\": \"mehmet\",\n    \"lastName\": \"test\",\n    \"email\": \"mehmettest@gmail.com\",\n    \"password\": \"54321\",\n    \"phone\": \"02534125678\",\n    \"userStatus\": 0\n  }\n\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithArray",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
